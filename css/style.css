@@ -1,4 +1,22 @@
 /* =============
+  VARIABLES
+ ============= */
+
+:root {
+  --clr-bg: #083b4c;
+  --clr-num: #1389b2;
+  --clr-fizz: #0bd6a1;
+  --clr-buzz: #fed066;
+  --clr-fizzbuzz: #f0466f;
+
+  --space: 40px;
+  --gap: 20px;
+
+  --fs-md: 24px;
+  --fs-xl: 50px;
+}
+
+/* =============
   RESET
  ============= */
 
@@ -8,4 +26,67 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* =============
+  GLOBAL
+ ============= */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--clr-bg);
+}
+
+/* =============
+  LAYOUT
+ ============= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space) 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 7 - var(--gap));
+  background-color: var(--clr-num);
+  font-size: var(--fs-md);
+  font-weight: bold;
+  aspect-ratio: 1;
+}
+
+/* =============
+  COMPONENTS
+ ============= */
+
+.container h1 {
+  text-align: center;
+  color: #fff;
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space);
+}
+
+/* =============
+  UTILITY
+ ============= */
+
+.fizz {
+  background-color: var(--clr-fizz);
+}
+
+.buzz {
+  background-color: var(--clr-buzz);
+}
+
+.fizz-buzz {
+  background-color: var(--clr-fizzbuzz);
 }
